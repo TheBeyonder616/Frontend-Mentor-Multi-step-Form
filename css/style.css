@@ -202,7 +202,7 @@ body {
 }
 
 .attribution {
-  font-size: calc(var(--fnt-Size) * 0.359);
+  font-size: calc(var(--fnt-Size) * 0.39);
   position: fixed;
   bottom: 2%;
   left: 50%;
