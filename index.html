@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A multi-step form for subscribing to our service. Provide your personal info, select a plan, and add-ons."
+    />
+    <meta
+      name="keywords"
+      content="multi-step form, subscription, user registration, personal info, plans, add-ons"
+    />
+    <meta name="author" content="Peter Godspower" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./Js/control.js" type="module"></script>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <main id="main" class="main">
+      <!--!========================================{Mobile}  -->
+      <article class="form-mobile" data-display="mobile">
+        <header class="form-mobile__header icon">
+          <svg class="svg" aria-label="Slider mobile">
+            <use href="./assets/images/icon.svg#slider-mobile"></use>
+          </svg>
+        </header>
+        <!-- ?[Controller] -->
+        <article class="form-mobile__container" data-display="form-container">
+          <form class="form-controller mobile--controller">
+            <label
+              class="label--radio"
+              for="controller-1"
+              tabindex="0"
+              data-action="controller"
+            >
+              <span class="radio-label heading-component">1</span>
+              <input
+                id="controller-1"
+                class="input--radio active"
+                type="radio"
+                name="controller"
+                data-input="controller 0"
+                tabindex="0"
+                data-controller
+              />
+            </label>
+
+            <label
+              class="label--radio"
+              for="controller-2"
+              tabindex="0"
+              data-action="controller"
+            >
+              <span class="radio-label heading-component">2</span>
+              <input
+                id="controller-2"
+                class="input--radio"
+                type="radio"
+                name="controller"
+                data-input="controller 1"
+                data-controller
+              />
+            </label>
+
+            <label
+              class="label--radio"
+              for="controller-3"
+              tabindex="0"
+              data-action="controller"
+            >
+              <span class="radio-label heading-component">3</span>
+              <input
+                id="controller-3"
+                class="input--radio"
+                type="radio"
+                name="controller"
+                data-input="controller 2"
+                data-controller
+              />
+            </label>
+
+            <label
+              class="label--radio"
+              for="controller-4"
+              tabindex="0"
+              data-action="controller"
+            >
+              <span class="radio-label heading-component">4</span>
+              <input
+                id="controller-4"
+                class="input--radio"
+                type="radio"
+                name="controller"
+                data-input="controller 3"
+                data-controller
+              />
+            </label>
+          </form>
+          <!--?[Form Section]  -->
+          <article class="form-mobile__slider" data-display="slider-mobile">
+            <!--!============================================= ?Step 1[Details] -->
+            <section class="form-mobile__section form--slider" data-slider>
+              <form class="form-step step--details" data-display="details">
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Personal info</h1>
+                  <p class="heading-p">
+                    Please provide your name, email address, and phone number.
+                  </p>
+                </div>
+                <!-- ?[details] -->
+                <div class="details">
+                  <!--?[Name]  -->
+                  <label class="label" for="userName" data-display="validation">
+                    <span class="heading-component label--name"> Name </span>
+                    <input
+                      class="input"
+                      id="userName"
+                      type="text"
+                      name="userName"
+                      placeholder="e.g.Stephen King"
+                      data-input="userName"
+                      data-tab="-1"
+                    />
+
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                      >This filed is required</span
+                    >
+                  </label>
+                  <!--?[Email]  -->
+                  <label
+                    class="label"
+                    for="userEmail"
+                    data-display="validation"
+                  >
+                    <span class="heading-component label--name">
+                      Email Address
+                    </span>
+                    <input
+                      class="input"
+                      id="userEmail"
+                      type="email"
+                      name="userEmail"
+                      placeholder="e.g.StephenKing@lorem.com"
+                      data-input="userEmail"
+                      data-tab="-1"
+                    />
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                      >This filed is required</span
+                    >
+                  </label>
+                  <!--?[Phone Number]  -->
+                  <label class="label" for="userTel" data-display="validation">
+                    <span class="heading-component label--name">
+                      Phone Number
+                    </span>
+                    <input
+                      class="input"
+                      id="userTel"
+                      type="tel"
+                      name="userTel"
+                      placeholder="e.g. +1 234 567 890"
+                      data-input="userTel"
+                      data-tab="-1"
+                    />
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                      >This filed is required</span
+                    >
+                  </label>
+                </div>
+              </form>
+            </section>
+            <!--!================================================= ?Step 2[Plans] -->
+            <section class="form-mobile__section form--slider" data-slider>
+              <form class="form-step step--plans" data-display="plan">
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Select your plan</h1>
+                  <p class="heading-p">
+                    You have the option of monthly or yearly billing
+                  </p>
+                </div>
+
+                <section
+                  class="plans"
+                  data-display="validation"
+                  data-toggle="yearly"
+                >
+                  <span class="heading-component error--message"
+                    >This filed is required</span
+                  >
+                  <!-- ?Arcade -->
+                  <label
+                    class="label label--plans"
+                    for="arcade"
+                    data-action="plan"
+                    data-tab="0"
+                  >
+                    <input
+                      class="radio--plan"
+                      id="arcade"
+                      type="radio"
+                      name="plan"
+                      data-input="plan"
+                      data-tab="0"
+                    />
+
+                    <div class="icon icon--plans">
+                      <svg class="svg" aria-label="Icon Arcade">
+                        <use xlink:href="./assets/images/icon.svg#arcade"></use>
+                      </svg>
+                    </div>
+
+                    <h2 class="heading-secondary">
+                      Arcade
+                      <span data-display="plan-price" data-price="plan-mobile">
+                        $9/mo</span
+                      >
+                      <span class="heading--yearly"> 2 months free</span>
+                    </h2>
+                  </label>
+                  <!-- ?Advanced -->
+                  <label
+                    class="label label--plans"
+                    for="advanced"
+                    data-action="plan"
+                    data-tab="0"
+                  >
+                    <input
+                      class="radio--plan"
+                      id="advanced"
+                      type="radio"
+                      name="plan"
+                      data-input="plan"
+                    />
+
+                    <div class="icon icon--plans">
+                      <svg class="svg" aria-label="Icon Arcade">
+                        <use
+                          xlink:href="./assets/images/icon.svg#advanced"
+                        ></use>
+                      </svg>
+                    </div>
+
+                    <h2 class="heading-secondary">
+                      Advanced
+                      <span data-display="plan-price" data-price="plan-mobile">
+                        $12/mo</span
+                      >
+                      <span class="heading--yearly"> 2 months free</span>
+                    </h2>
+                  </label>
+                  <!-- ?Pro -->
+                  <label
+                    class="label label--plans"
+                    for="pro"
+                    data-action="plan"
+                    data-tab="0"
+                  >
+                    <input
+                      class="radio--plan"
+                      id="pro"
+                      type="radio"
+                      name="plan"
+                      data-input="plan"
+                    />
+
+                    <div class="icon icon--plans">
+                      <svg class="svg" aria-label="Icon Pro">
+                        <use xlink:href="./assets/images/icon.svg#pro"></use>
+                      </svg>
+                    </div>
+
+                    <h2 class="heading-secondary">
+                      Pro
+                      <span data-display="plan-price" data-price="plan-mobile">
+                        $15/mo</span
+                      >
+                      <span class="heading--yearly"> 2 months free</span>
+                    </h2>
+                  </label>
+
+                  <div class="plan__controller">
+                    <h2 class="heading-secondary">Monthly</h2>
+                    <label
+                      class="plan-controller"
+                      for="planController"
+                      data-action="plan-controller"
+                      data-tab="0"
+                    >
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="planController"
+                        id="planController"
+                        data-input="planController"
+                      />
+                    </label>
+                    <h2 class="heading-secondary heading--plans">Yearly</h2>
+                  </div>
+                </section>
+              </form>
+            </section>
+            <!--!================================================ ?Step 3[Add-ons] -->
+            <section class="form-mobile__section form--slider" data-slider>
+              <form class="form-step step--add-ons" data-display="adds-on">
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Pick add-ons</h1>
+                  <p class="heading-p">
+                    Add-ons help enhance your gaming experience
+                  </p>
+                </div>
+
+                <section class="add-ons" data-display="validation">
+                  <span class="heading-component error--message"
+                    >This filed is required</span
+                  >
+
+                  <!-- ?Service-->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="service"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="service"
+                        type="checkbox"
+                        name="service"
+                        data-input="service"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Online service
+                        <span>Access to multiplayer games</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-mobile"
+                    >
+                      +$1/mo</span
+                    >
+                  </label>
+
+                  <!-- ?Storage -->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="storage"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="storage"
+                        type="checkbox"
+                        name="storage"
+                        data-input="storage"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Larger storage
+                        <span>Extra 1TB of cloud save</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-mobile"
+                    >
+                      +$2/mo</span
+                    >
+                  </label>
+
+                  <!-- ?Profile -->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="profile"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="profile"
+                        type="checkbox"
+                        name="profile"
+                        data-input="profile"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Customizable profile
+                        <span>Custom theme on your profile</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-mobile"
+                    >
+                      +$2/mo</span
+                    >
+                  </label>
+                </section>
+              </form>
+            </section>
+            <!--!================================================= ?Step 4[Finish-up] -->
+            <section class="form-mobile__section form--slider" data-slider>
+              <section
+                class="form-step step--finishe-up"
+                data-display="finish-up"
+              >
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Finishing up</h1>
+                  <p class="heading-p">
+                    Double-check everything looks Ok before confirming
+                  </p>
+                </div>
+                <!-- ?Invoice -->
+                <section class="invoice">
+                  <div class="invoice__container">
+                    <div
+                      class="invoice__heading"
+                      data-display="finish-up-heading"
+                    >
+                      <h2 class="heading-secondary heading--plan">
+                        <span
+                          class="heading--change"
+                          data-action="change"
+                          data-tab="0"
+                          >Change</span
+                        >
+                      </h2>
+                      <h3
+                        class="heading-third heading--plan"
+                        data-display-price="plan"
+                      ></h3>
+                    </div>
+                    <hr />
+                    <!--!===============================[DOM]  -->
+                    <ul class="invoice__list" data-display="invoice-list"></ul>
+                  </div>
+
+                  <div class="invoice__total" data-display="total">
+                    <h3 class="heading-third">Total (per month)</h3>
+                    <span class="heading-third heading--total"> +12/mo</span>
+                  </div>
+                </section>
+              </section>
+            </section>
+            <!--!================================================== ?Step 5[Thanks] -->
+            <section class="form-mobile__section form--slider" data-slider>
+              <section class="form-step step--thanks" data-display="thanks">
+                <div class="thanks__container">
+                  <div class="icon icon--thanks">
+                    <svg class="svg" aria-label="Thank you">
+                      <use
+                        xlink:href="./assets/images/icon.svg#thank-you"
+                      ></use>
+                    </svg>
+                  </div>
+
+                  <h2 class="heading-primary">Thank you</h2>
+
+                  <p class="heading-p heading--thanks">
+                    <span> Thanks for confirming your subscription! </span>
+                    <span class="span">
+                      We hope you have fun using our platform. If you ever need
+                      support, please feel free to email us at
+                      support@loremgaming.com
+                    </span>
+                  </p>
+                </div>
+              </section>
+            </section>
+          </article>
+          <!--!===================================== ?Buttons -->
+          <div class="btn-container">
+            <button class="btn--back" data-action="go-back">Go Back</button>
+            <button class="btn show" data-action="next-step">Next Step</button>
+          </div>
+        </article>
+      </article>
+      <!--!============================================================ ?{Desktop}  -->
+      <article class="form-desktop" data-display="desktop">
+        <header class="form-desktop__header">
+          <div class="icon icon--desktop">
+            <svg class="svg" aria-label="Slider desktop">
+              <use href="./assets/images/icon.svg#slider-desktop"></use>
+            </svg>
+          </div>
+
+          <form class="form-controller desktop--controller">
+            <div class="desktop-controller__container">
+              <div>
+                <label
+                  class="label--radio"
+                  for="controller-desktop-1"
+                  tabindex="0"
+                  data-action="controller"
+                >
+                  <span class="radio-label heading-component">1</span>
+
+                  <input
+                    id="controller-desktop-1"
+                    class="input--radio active"
+                    type="radio"
+                    name="controller-desktop"
+                    data-input="controller 0"
+                    data-controller
+                  />
+                </label>
+              </div>
+              <h2 class="heading-secondary heading--controller">
+                Step 1
+                <span>Your info</span>
+              </h2>
+            </div>
+
+            <div class="desktop-controller__container">
+              <div>
+                <label
+                  class="label--radio"
+                  for="controller-desktop-2"
+                  tabindex="0"
+                  data-action="controller"
+                >
+                  <span class="radio-label heading-component">2</span>
+                  <input
+                    id="controller-desktop-2"
+                    class="input--radio"
+                    type="radio"
+                    name="controller-desktop"
+                    data-input="controller 1"
+                    data-controller
+                  />
+                </label>
+              </div>
+              <h2 class="heading-secondary heading--controller">
+                Step 2
+                <span>Select plan</span>
+              </h2>
+            </div>
+
+            <div class="desktop-controller__container">
+              <div>
+                <label
+                  class="label--radio"
+                  for="controller-desktop-3"
+                  tabindex="0"
+                  data-action="controller"
+                >
+                  <span class="radio-label heading-component">3</span>
+                  <input
+                    id="controller-desktop-3"
+                    class="input--radio"
+                    type="radio"
+                    name="controller-desktop"
+                    data-input="controller 2"
+                    data-controller
+                  />
+                </label>
+              </div>
+
+              <h2 class="heading-secondary heading--controller">
+                Step 3
+                <span>Add-ons</span>
+              </h2>
+            </div>
+            <div class="desktop-controller__container">
+              <div>
+                <label
+                  class="label--radio"
+                  for="controller-desktop-4"
+                  tabindex="0"
+                  data-action="controller"
+                >
+                  <span class="radio-label heading-component">4</span>
+                  <input
+                    id="controller-desktop-4"
+                    class="input--radio"
+                    type="radio"
+                    name="controller-desktop"
+                    data-input="controller 3"
+                    data-controller
+                  />
+                </label>
+              </div>
+              <h2 class="heading-secondary heading--controller">
+                Step 4
+                <span>Summary </span>
+              </h2>
+            </div>
+          </form>
+        </header>
+
+        <article class="form-desktop__container" data-display="form-container">
+          <section class="form-desktop-steps__container">
+            <div class="slide" data-display="slider-desktop">
+              <!--!================================================== ?Step 1[Details] -->
+              <form
+                class="form-step step--details form--slider"
+                data-display="details"
+                data-slider
+              >
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Personal info</h1>
+                  <p class="heading-p">
+                    Please provide your name, email address, and phone number.
+                  </p>
+                </div>
+                <!-- ?[details] -->
+                <div class="details">
+                  <!--?[Name]  -->
+                  <label
+                    class="label"
+                    for="userName-desktop"
+                    data-display="validation"
+                  >
+                    <span class="heading-component label--name"> Name </span>
+                    <input
+                      class="input"
+                      id="userName-desktop"
+                      type="text"
+                      name="userName-desktop"
+                      placeholder="e.g.Stephen King"
+                      data-input="userName-desktop"
+                      data-tab="-1"
+                    />
+
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                    ></span>
+                  </label>
+                  <!--?[Email]  -->
+                  <label
+                    class="label"
+                    for="userEmail-desktop"
+                    data-display="validation"
+                  >
+                    <span class="heading-component label--name">
+                      Email Address
+                    </span>
+                    <input
+                      class="input"
+                      id="userEmail-desktop"
+                      type="email"
+                      name="userEmail-desktop"
+                      placeholder="e.g.StephenKing@lorem.com"
+                      data-input="userEmail-desktop"
+                      data-tab="-1"
+                    />
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                    ></span>
+                  </label>
+                  <!--?[Phone Number]  -->
+                  <label
+                    class="label"
+                    for="userTel-desktop"
+                    data-display="validation"
+                  >
+                    <span class="heading-component label--name">
+                      Phone Number
+                    </span>
+                    <input
+                      class="input"
+                      id="userTel-desktop"
+                      type="tel"
+                      name="userTel-desktop"
+                      placeholder="e.g. +1 234 567 890"
+                      data-input="userTel-desktop"
+                      data-tab="-1"
+                    />
+                    <span
+                      class="heading-component error--message"
+                      data-display="error-message"
+                    ></span>
+                  </label>
+                </div>
+              </form>
+              <!--!================================================== ?Step 2[Plans] -->
+              <form
+                class="form-step step--plans form--slider"
+                data-display="plan"
+                data-slider
+              >
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Select your plan</h1>
+                  <p class="heading-p">
+                    You have the option of monthly or yearly billing
+                  </p>
+                </div>
+
+                <section
+                  class="plans"
+                  data-display="validation"
+                  data-toggle="yearly"
+                >
+                  <span class="heading-component error--message"
+                    >This filed is required</span
+                  >
+                  <div class="plans__container">
+                    <!-- ?Arcade -->
+                    <label
+                      class="label label--plans"
+                      for="arcade-desktop"
+                      data-action="plan"
+                      data-tab="0"
+                    >
+                      <input
+                        class="radio--plan"
+                        id="arcade-desktop"
+                        type="radio"
+                        name="plan-desktop"
+                        data-input="plan"
+                      />
+
+                      <div class="icon icon--plans">
+                        <svg class="svg" aria-label="Icon Arcade">
+                          <use
+                            xlink:href="./assets/images/icon.svg#arcade"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <h2 class="heading-secondary">
+                        Arcade
+                        <span
+                          data-display="plan-price"
+                          data-price="plan-desktop"
+                        >
+                          $9/mo</span
+                        >
+                        <span class="heading--yearly"> 2 months free</span>
+                      </h2>
+                    </label>
+                    <!-- ?Advanced -->
+                    <label
+                      class="label label--plans"
+                      for="advanced-desktop"
+                      data-action="plan"
+                      data-tab="0"
+                    >
+                      <input
+                        class="radio--plan"
+                        id="advanced-desktop"
+                        type="radio"
+                        name="plan-desktop"
+                        data-input="plan"
+                      />
+
+                      <div class="icon icon--plans">
+                        <svg class="svg" aria-label="Icon Arcade">
+                          <use
+                            xlink:href="./assets/images/icon.svg#advanced"
+                          ></use>
+                        </svg>
+                      </div>
+
+                      <h2 class="heading-secondary">
+                        Advanced
+                        <span
+                          data-display="plan-price"
+                          data-price="plan-desktop"
+                        >
+                          $12/mo</span
+                        >
+                        <span class="heading--yearly"> 2 months free</span>
+                      </h2>
+                    </label>
+                    <!-- ?Pro -->
+                    <label
+                      class="label label--plans"
+                      for="pro-desktop"
+                      data-action="plan"
+                      data-tab="0"
+                    >
+                      <input
+                        class="radio--plan"
+                        id="pro-desktop"
+                        type="radio"
+                        name="plan-desktop"
+                        data-input="plan"
+                      />
+
+                      <div class="icon icon--plans">
+                        <svg class="svg" aria-label="Icon Pro">
+                          <use xlink:href="./assets/images/icon.svg#pro"></use>
+                        </svg>
+                      </div>
+
+                      <h2 class="heading-secondary">
+                        Pro
+                        <span
+                          data-display="plan-price"
+                          data-price="plan-desktop"
+                        >
+                          $15/mo</span
+                        >
+                        <span class="heading--yearly"> 2 months free</span>
+                      </h2>
+                    </label>
+                  </div>
+                  <!--?Controller  -->
+                  <div class="plan__controller">
+                    <h2 class="heading-secondary">Monthly</h2>
+                    <label
+                      class="plan-controller"
+                      for="planController-desktop"
+                      data-action="plan-controller"
+                      data-tab="0"
+                    >
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="planController-desktop"
+                        id="planController-desktop"
+                        data-input="plan-controller-desktop"
+                      />
+                    </label>
+                    <h2 class="heading-secondary heading--plans">Yearly</h2>
+                  </div>
+                </section>
+              </form>
+              <!--!================================================== ?Step 3[Add-ons] -->
+              <form
+                class="form-step step--add-ons form--slider"
+                data-display="adds-on"
+                data-slider
+              >
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Pick add-ons</h1>
+                  <p class="heading-p">
+                    Add-ons help enhance your gaming experience
+                  </p>
+                </div>
+
+                <section class="add-ons" data-display="validation">
+                  <span class="heading-component error--message"
+                    >This filed is required</span
+                  >
+
+                  <!-- ?Service-->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="service-desktop"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="service-desktop"
+                        type="checkbox"
+                        name="service-desktop"
+                        data-input="service"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Online service
+                        <span>Access to multiplayer games</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-desktop"
+                    >
+                      +$1/mo</span
+                    >
+                  </label>
+
+                  <!-- ?Storage -->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="storage-desktop"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="storage-desktop"
+                        type="checkbox"
+                        name="storage-desktop"
+                        data-input="storage"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Larger storage
+                        <span>Extra 1TB of cloud save</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-desktop"
+                    >
+                      +$2/mo</span
+                    >
+                  </label>
+
+                  <!-- ?Profile -->
+                  <label
+                    class="label label--plans label--adds-on"
+                    for="profile-desktop"
+                    data-display="label--adds-on"
+                  >
+                    <div class="add-ons__details">
+                      <input
+                        class="checkbox"
+                        id="profile-desktop"
+                        type="checkbox"
+                        name="profile-desktop"
+                        data-input="profile"
+                        data-tab="-1"
+                      />
+
+                      <h3 class="heading-secondary">
+                        Customizable profile
+                        <span>Custom theme on your profile</span>
+                      </h3>
+                    </div>
+
+                    <span
+                      class="heading-component heading--adds-on"
+                      data-price="adds-on-desktop"
+                    >
+                      +$2/mo</span
+                    >
+                  </label>
+                </section>
+              </form>
+              <!--!================================================== ?Step 4[Finish-up] -->
+              <section
+                class="form-step step--finishe-up form--slider"
+                data-display="finish-up"
+                data-slider
+              >
+                <div class="form-step__header">
+                  <h1 class="heading-primary">Finishing up</h1>
+                  <p class="heading-p">
+                    Double-check everything looks Ok before confirming
+                  </p>
+                </div>
+                <!-- ?Invoice -->
+                <section class="invoice">
+                  <div class="invoice__container">
+                    <div
+                      class="invoice__heading"
+                      data-display="finish-up-heading"
+                    >
+                      <h2 class="heading-secondary heading--plan">
+                        <span
+                          class="heading--change"
+                          data-action="change"
+                          data-tab="0"
+                          >Change</span
+                        >
+                      </h2>
+                      <h3
+                        class="heading-third heading--plan"
+                        data-display-price="plan"
+                      ></h3>
+                    </div>
+                    <hr />
+                    <!--!===============================[DOM]  -->
+                    <ul class="invoice__list" data-display="invoice-list"></ul>
+                  </div>
+
+                  <div class="invoice__total" data-display="total">
+                    <h3 class="heading-third">Total (per month)</h3>
+                    <span class="heading-third heading--total"> +12/mo</span>
+                  </div>
+                </section>
+              </section>
+              <!--!================================================== ?Step 5[Thanks] -->
+              <section
+                class="form-step step--thanks form--slider"
+                data-display="thanks"
+                data-slider
+              >
+                <div class="thanks__container">
+                  <div class="icon icon--thanks">
+                    <svg class="svg" aria-label="Thank you">
+                      <use
+                        xlink:href="./assets/images/icon.svg#thank-you"
+                      ></use>
+                    </svg>
+                  </div>
+
+                  <h2 class="heading-primary">Thank you</h2>
+
+                  <p class="heading-p heading--thanks">
+                    <span> Thanks for confirming your subscription! </span>
+                    <span class="span">
+                      We hope you have fun using our platform. If you ever need
+                      support, please feel free to email us at
+                      support@loremgaming.com
+                    </span>
+                  </p>
+                </div>
+              </section>
+            </div>
+          </section>
+          <!-- !============================================================ ?Buttons -->
+          <div class="btn-container" data-display="buttons">
+            <button class="btn--back" data-action="go-back">Go Back</button>
+            <button class="btn show" data-action="next-step">Next Step</button>
+          </div>
+        </article>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        class="a"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a class="a" href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
